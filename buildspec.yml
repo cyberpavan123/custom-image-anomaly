@@ -19,6 +19,6 @@ phases:
       - echo Pushing the Docker image...
       - docker push $827978678406.dkr.ecr.eu-west-1.amazonaws.com/anomalyimage:latest
 artifacts:
-  name: ${account}.dkr.ecr.eu-west-1.amazonaws.com/anomalyimage:latest
+  name: $827978678406.dkr.ecr.eu-west-1.amazonaws.com/anomalyimage:latest
 
   
