@@ -6,7 +6,7 @@ import datetime
 client = boto3.client('sts')
 account = client.get_caller_identity()['Account']
 
-role = "arn:aws:iam::827978678406:role/service-role/AmazonSageMaker-ExecutionPolicy-20210202T070413" #get_execution_role()
+role = "arn:aws:iam::827978678406:role/service-role/AmazonSageMaker-ExecutionRole-20210202T070413" #get_execution_role()
 
 today = datetime.datetime.now()
 dateAsString = 'anomaly-ml-image-pv' + today.strftime('%Y%m%d%H%M') 
