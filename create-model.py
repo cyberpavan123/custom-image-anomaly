@@ -9,12 +9,12 @@ account = client.get_caller_identity()['Account']
 role = "arn:aws:iam::827978678406:role/service-role/AmazonSageMaker-ExecutionRole-20210202T070413" #get_execution_role()
 
 today = datetime.datetime.now()
-dateAsString = 'anomalyimage-pv' + today.strftime('%Y%m%d%H%M') 
+dateAsString =  today.strftime('%Y%m%d%H%M') 
 
 region = boto3.Session().region_name
 sagemaker_session = sagemaker.session.Session()
 bucket = sagemaker_session.default_bucket()
-prefix = 'anomaly-ml-image' + dateAsString
+prefix = 'anomalyimage-pv' + dateAsString
 job_name = "anomaly-detection-" + dateAsString 
 model_name = "anomaly-detection-model-" + dateAsString
 print(region)
